@@ -82,6 +82,13 @@ export const tariffs = [
         // Updated 2022-09-24 - http://www.hev.dk/faste-afgifter/
         normal: .15,
         peak: .15
+    },
+    {
+        id: "veksel",
+        name: "Veksel A/S",
+        // Kilde: 
+        normal: .2199,
+        peak: .6564
     }
 
 ]
@@ -806,6 +813,43 @@ export const products = [
             },
             {
                 name: "Watts tager ikke nye kunder"
+            }
+        ]
+    },
+    {
+        id: "kernfull",
+        name: "Kärnfull",
+        link: "https://dk.karnfull.com/",
+	//jeg er ikke hundrede på hvordan skal skrives ind her, men har gjort mit bedste
+        payments: Forbrugsafregnet månedligt",
+        prices: [
+            {
+                name: "Spotpris",
+                amount: null
+            },
+            {
+                name: "Spotpris tillæg",
+                amount: 0.4, //?den her jeg er usikker på
+                calculated: true
+            }
+        ],
+        fees: [
+            {
+                name: "Abonnement",
+                amount: 39,
+                paymentsPerYear: 12
+            },
+            {
+                name: "Betaling via betalingskort", //første er gratis
+                amount: 35
+            },
+            {
+                name: "Betaling via betalingsservice",
+                amount: 8
+            },
+ 	    {
+                name: "Rykkergebyr",
+                amount: 100
             }
         ]
     }
